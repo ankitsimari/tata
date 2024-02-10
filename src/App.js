@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Accordion from "./Components/Accordian";
+import Calculator from "./Components/Calculator";
+import Category from "./Components/Category";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import Hero from "./Components/Hero";
+import Highlights from "./Components/Highlights";
+import { Navbar } from "./Components/Navbar";
+import CircleAnimation from "./Components/Pages/CircleAnimation";
+import CircleDiv from "./Components/Pages/DIV";
+import Partner from "./Components/Partner";
+import Process from "./Components/Process";
+import ReferAndEarn from "./Components/ReferAndEarn";
+import Testimonial from "./Components/Testimonial";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <CircleDiv/> */}
+      {/* <CircleAnimation/> */}
+      <Navbar />
+      <Hero />
+      <Highlights />
+      <Partner />
+      <Process />
+      <Testimonial />
+      <Category />
+      <Calculator />
+      <ReferAndEarn />
+      <Accordion/>
+      <Contact />
+      <Footer />
     </div>
   );
 }

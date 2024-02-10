@@ -1,38 +1,252 @@
-.App {
+* {
+  margin: 0%;
+  padding: 0%;
+  --primary-color: #8800ec;
+  --secondary-color: #ff0096;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.fs-xl {
+  font-size: 40px;
+}
+
+.btn {
+  background-color: #8800ec;
+  color: white;
+}
+.btn:hover {
+  color: #8800ec;
+  background-color: white;
+  border: 1px solid #8800ec;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav .title {
+  font-size: 1.8rem;
+  margin: 1rem;
+  margin-left: 80px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  background-color: white;
+  margin-top: 20px;
+}
+
+nav input {
+  outline: none;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none !important;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0.4rem;
+}
+nav ul li a:hover,
+.active {
+  color: #8800ec;
+}
+
+.searchbox {
+  position: relative;
+  padding-left: 30px !important;
+}
+.search-icon {
+  position: absolute;
+  z-index: 3;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: black;
+  border-radius: 0.2rem;
+}
+
+/* Hero */
+
+.colorText {
+  color: var(--secondary-color);
+}
+.herobtn {
+  padding: 12px 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .heroimg {
+    transform: scale(1.2);
+    margin-top: 50px;
+    margin-bottom: -50px;
+  }
+}
+/* Highlights */
+
+.secondText {
+  color: var(--primary-color);
+}
+
+.themeBg {
+  background-color: #fcf8ff;
+}
+
+.grayBg {
+  background-color: #f8f9fa;
+}
+
+.button {
+  transition: all 1s ease-in-out;
+}
+
+.Active {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  bottom: -1px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.dropshadow {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1.dropshadow {
+  font-size: 55px;
+}
+
+.NotActive {
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contactBg {
+  background-color: #f9f2fe;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.w-fit {
+  width: fit-content;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.chartBottom {
+  margin-top: -100px;
+}
+
+.refertimg {
+  transform: scale(1.4);
+}
+
+.principalBefore {
+  height: 15px;
+  width: 15px;
+  background-color: var(--secondary-color);
+}
+
+.accordion {
+  cursor: pointer;
+}
+
+.quote {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+  }
+  nav .title {
+    margin-left: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    display: flex;
+    position: absolute;
+    top: 75px;
+    border-radius: 0px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0px;
+  }
+
+  nav ul li a {
+    margin: 0.5rem 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .Active {
+    order: 4;
   }
 }
