@@ -4,6 +4,9 @@ import { MdTouchApp } from "react-icons/md";
 import { TbCertificateOff } from "react-icons/tb";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaHandHoldingUsd } from "react-icons/fa";
+import Apply from './Pages/Apply';
+import Document from './Pages/Document';
+import Fees from './Pages/Fees';
 
 
 export default function Category() {
@@ -27,7 +30,7 @@ export default function Category() {
         </div>
 
         <div className=" border-1 border border-secondary p-5">
-            {value=="Eligibility"?<Eligibility/>:value=="apply"?"apply":value=='Documentation'?"Documentation":"Fees"}
+            {value=="Eligibility"?<Eligibility/>:value=="apply"?<Apply/>:value=='Documentation'?<Document/>:<Fees/>}
         </div>
 
     </div>

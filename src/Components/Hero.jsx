@@ -13,11 +13,11 @@ export default function Hero() {
           <img className="img-fluid heroimg" src={HeroImg} alt="" />
         </div>
         <div className="col-lg-7 order-lg-1">
-          <h1 className="mt-lg-5 fw-bold dropshadow lh-base">
+          <h1 className="mt-lg-5 fs-xl fw-bold dropshadow lh-base">
             Turn Dream Into Reality with{" "}
             <span className="colorText">Personal Loans</span>{" "}
           </h1>
-          <div className="d-flex gap-5 my-4">
+          <div className="d-flex gap-5 my-4 flex-wrap">
             <span className="d-flex align-items-center">
               <img className="img-fluid me-3" src={frame1} alt="" />
               <span>
@@ -26,7 +26,7 @@ export default function Hero() {
               </span>
             </span>
 
-            <span className="d-flex align-items-center ps-4">
+            <span className="d-flex align-items-center ps-sm-4">
               <img className="img-fluid me-3" src={frame2} alt="" />
               <span>
                 <h6 className="m-0 fw-bold fs-5">Avail Zero</h6>
@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
 
 
-          <div className="d-flex gap-5 my-4">
+          <div className="d-flex gap-5 my-4 flex-wrap">
             <span className="d-flex align-items-center">
               <img className="img-fluid me-3" src={frame3} alt="" />
               <span>
@@ -45,7 +45,7 @@ export default function Hero() {
               </span>
             </span>
 
-            <span className="d-flex align-items-center ps-4">
+            <span className="d-flex align-items-center ps-sm-4">
               <img className="img-fluid me-3" src={frame4} alt="" />
               <span>
                 <h6 className="m-0 fw-bold fs-5">Avail Zero</h6>

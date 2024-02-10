@@ -10,10 +10,9 @@ body {
   font-family: "Proxima Nova", sans-serif;
 }
 
-.fs-xl {
-  font-size: 40px;
+.fs-xl{
+  font-size: 30px;
 }
-
 .btn {
   background-color: #8800ec;
   color: white;
@@ -120,6 +119,13 @@ nav .menu span {
     margin-top: 50px;
     margin-bottom: -50px;
   }
+  .fs-xl {
+    font-size: 40px;
+  }
+
+  h1.dropshadow {
+    font-size: 55px;
+  }
 }
 /* Highlights */
 
@@ -158,9 +164,7 @@ nav .menu span {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-h1.dropshadow {
-  font-size: 55px;
-}
+
 
 .NotActive {
   padding: 10px;

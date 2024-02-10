@@ -7,16 +7,16 @@ const SplitChart = ({ first, second, total }) => {
   let timeoutId = useRef(null);
 
   useEffect(() => {
-    clearTimeout(timeoutId.current); // Clear the previous timer if it exists
+    clearTimeout(timeoutId.current); 
 
     timeoutId.current = setTimeout(() => {
       const ctx = chartRef.current.getContext('2d');
 
       if (myChart.current) {
-        myChart.current.destroy(); // Destroy previous chart instance if it exists
+        myChart.current.destroy(); 
       }
 
-      const a = 100; // fixed width for the chart
+      const a = 100; 
 
       myChart.current = new Chart(ctx, {
         type: 'doughnut',
@@ -49,7 +49,7 @@ const SplitChart = ({ first, second, total }) => {
                     label += ': ';
                   }
                   if (context.parsed) {
-                    label += (context.parsed * 2).toFixed(2) + '%'; // Displaying double the actual percentage
+                    label += (context.parsed * 2).toFixed(2) + '%'; 
                   }
 
                   return label;
@@ -59,7 +59,7 @@ const SplitChart = ({ first, second, total }) => {
           },
         },
       });
-    }, 500); // Debounce for 0.5 seconds
+    }, 500); 
   }, [first, second, total]);
 
   return (

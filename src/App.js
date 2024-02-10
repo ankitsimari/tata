@@ -7,8 +7,6 @@ import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Highlights from "./Components/Highlights";
 import { Navbar } from "./Components/Navbar";
-import CircleAnimation from "./Components/Pages/CircleAnimation";
-import CircleDiv from "./Components/Pages/DIV";
 import Partner from "./Components/Partner";
 import Process from "./Components/Process";
 import ReferAndEarn from "./Components/ReferAndEarn";
@@ -18,8 +16,6 @@ import Testimonial from "./Components/Testimonial";
 function App() {
   return (
     <div className="App">
-      {/* <CircleDiv/> */}
-      {/* <CircleAnimation/> */}
       <Navbar />
       <Hero />
       <Highlights />

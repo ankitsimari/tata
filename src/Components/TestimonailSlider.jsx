@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const testimonials = [
   {
@@ -18,9 +18,17 @@ const testimonials = [
   },
 ];
 
-
 const TestimonialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextSlide = (currentSlide + 1) % testimonials.length;
+      setCurrentSlide(nextSlide);
+    }, 1500); 
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
   const goToSlide = (index) => {
     setCurrentSlide(index);

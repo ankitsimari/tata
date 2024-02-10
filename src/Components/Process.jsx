@@ -1,8 +1,6 @@
 import React from "react";
 import Mobile from "../Image/Mobile.png";
 import img from "../Image/Vector.png";
-import scale from "../Image/scale.png"
-import CircleAnimation from "./Pages/CircleAnimation";
 import Slider from "./Slider";
 export default function Process() {
   return (

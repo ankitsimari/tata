@@ -134,53 +134,53 @@ const Calculator = () => {
 
         <div className="col-lg-8 ps-lg-3 p-2">
           <div className="bg-white shadow rounded-3 p-3 h-100 my-2">
-           <div className="row">
-           <div className="col-md-7 pt-4">
-              <div className="position-relative">
-                <SplitChart
-                  first={principalPercentage}
-                  second={interestPercentage}
-                  total={amount}
-                />
-                <div className="chartBottom p-3 fw-semibold fs-6 w-100">
-                  <div className="my-4 d-flex justify-content-between">
-                  <span><FaSquare className="colorText me-2" />Principal Amount:</span>
-                    <span className="principal secondText">{amount}</span>
-                  </div>
-                  <div className="my-4 d-flex justify-content-between">
-                  <span><FaSquare className="text-secondary me-2" />Interest Amount:</span>
-                    <span className="interest secondText">{totalInterest}</span>
-                  </div>
+            <div className="row">
+              <div className="col-md-7 pt-4">
+                <div className="position-relative">
+                  <SplitChart
+                    first={principalPercentage}
+                    second={interestPercentage}
+                    total={amount}
+                  />
+                  <div className="chartBottom p-3 fw-semibold fs-6 w-100">
+                    <div className="my-4 d-flex justify-content-between">
+                      <span>
+                        <FaSquare className="colorText me-2" />
+                        Principal Amount:
+                      </span>
+                      <span className="principal secondText">{amount}</span>
+                    </div>
+                    <div className="my-4 d-flex justify-content-between">
+                      <span>
+                        <FaSquare className="text-secondary me-2" />
+                        Interest Amount:
+                      </span>
+                      <span className="interest secondText">
+                        {totalInterest}
+                      </span>
+                    </div>
 
-                  <div className="my-4 d-flex justify-content-between">
-                    <span>Total Payable Amount:</span>
-                    <span className="pay secondText">{totalPayment}</span>
+                    <div className="my-4 d-flex justify-content-between">
+                      <span>Total Payable Amount:</span>
+                      <span className="pay secondText">{totalPayment}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="col-md-5 pb-4">
-              {/* <h3 className="results">
-                <br />
-                Monthly EMI: <span className="month-pay">{monthlyPayment}</span>
-                <br />
-                Principal Percentage: <span>{principalPercentage}%</span>
-                <br />
-                Interest Percentage: <span>{interestPercentage}%</span>
-                <br />
-              </h3> */}
+              <div className="col-md-5 pb-4">
+                <div className="py-5 themeBg rounded mt-4">
+                  <h3 className="fs-4 mt-4 fw-medium text-center">
+                    Estimated Monthly Installments(EMI)
+                  </h3>
+                  <p className="fs-3 pb-4 text-black text-center pt-1 fw-bold">
+                    ₹{monthlyPayment}
+                  </p>
+                </div>
 
-              <div className="py-5 themeBg rounded mt-4">
-                <h3 className="fs-4 mt-4 fw-medium text-center">Estimated Monthly Installments(EMI)</h3>
-                <p className="fs-3 pb-4 text-black text-center pt-1 fw-bold">₹{monthlyPayment}</p>
+                <button className="btn herobtn w-100 mt-3">Apply Now</button>
               </div>
-
-              <button className="btn herobtn w-100 mt-3">Apply Now</button>
-
-
             </div>
-           </div>
           </div>
         </div>
       </div>
